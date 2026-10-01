@@ -1,3 +1,10 @@
+"""
+This project implements a production-oriented RAG API using FastAPI,
+ChromaDB, and Ollama. It provides standard and streaming chat endpoints,
+response caching, request-level observability, and automated LLM evaluation
+with DeepEval for measuring answer quality and retrieval performance.
+"""
+
 import time
 
 from fastapi import FastAPI, HTTPException, Request
