@@ -1,0 +1,21 @@
+services:
+  api:
+    build: .
+    container_name: chefmate-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - chromadb
+
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: chefmate-chromadb
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma_data:/data
+
+volumes:
+  chroma_data:
