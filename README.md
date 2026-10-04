@@ -313,7 +313,6 @@ LLM_Production_API_MLOps/
 ├── requirements.txt
 ├── .dockerignore
 ├── .gitignore
-├── .env
 ```
 
 ### Core Files
