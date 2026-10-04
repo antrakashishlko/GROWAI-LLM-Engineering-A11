@@ -1,8 +1,8 @@
 """
-This project implements a production-oriented RAG API using FastAPI,
-ChromaDB and Ollama. It provides standard and streaming chat endpoints,
-response caching, request-level observability and automated LLM evaluation
-with DeepEval for measuring answer quality and retrieval performance.
+This project implements a production-style LLM API using FastAPI.
+It provides chat and streaming endpoints with RAG, caching,
+evaluation and observability features for monitoring API behavior.
+The application can be deployed locally using Docker and Docker Compose.
 """
 
 import time
