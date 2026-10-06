@@ -15,7 +15,6 @@ from app.rag_pipeline import (
 
 from evaluation.test_cases import test_cases
 
-
 def run_evaluation():
 
     prepared_test_cases = []
@@ -85,7 +84,6 @@ def run_evaluation():
 
     print("\nEvaluation completed.")
     print(results)
-
 
 if __name__ == "__main__":
     run_evaluation()
