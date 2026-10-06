@@ -1,6 +1,5 @@
 from deepeval.test_case import LLMTestCase
 
-
 test_cases = [
     LLMTestCase(
         input="What is artificial intelligence?",
@@ -11,7 +10,7 @@ test_cases = [
     LLMTestCase(
         input="What are the goals of artificial intelligence?",
         actual_output="",
-        expected_output="The goals of artificial intelligence include learning, reasoning, knowledge representation, planning, natural language processing, perception, and robotics."
+        expected_output="The goals of artificial intelligence include learning, reasoning, knowledge representation, planning, natural language processing, perception and robotics."
     ),
 
     LLMTestCase(
