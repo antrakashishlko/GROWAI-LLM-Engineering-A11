@@ -15,13 +15,11 @@ from .logging_middleware import write_request_log
 from .models import ChatRequest, ChatResponse
 from .rag import get_rag_response
 
-
 app = FastAPI(
     title="ChefMate Production LLM API",
     description="Production RAG API with FastAPI, caching and observability",
     version="1.0.0"
 )
-
 
 @app.get("/health")
 def health_check():
@@ -32,7 +30,6 @@ def health_check():
         "status": "healthy",
         "service": "ChefMate Production LLM API"
     }
-
 
 @app.post("/chat", response_model=ChatResponse)
 def chat(request: Request, chat_request: ChatRequest):
@@ -84,7 +81,6 @@ def chat(request: Request, chat_request: ChatRequest):
 
     return ChatResponse(answer=answer)
 
-
 def stream_text(text: str):
     """
     Stream the response text in small chunks.
@@ -94,7 +90,6 @@ def stream_text(text: str):
 
     for word in words:
         yield f"data: {word} \n\n"
-
 
 @app.post("/chat/stream")
 def chat_stream(request: Request, chat_request: ChatRequest):
