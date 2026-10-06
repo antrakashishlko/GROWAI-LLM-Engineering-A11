@@ -5,12 +5,10 @@ from pathlib import Path
 
 from fastapi import Request
 
-
 LOG_DIR = Path(__file__).resolve().parent.parent / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 LOG_FILE = LOG_DIR / "requests.jsonl"
-
 
 def estimate_tokens(text: str) -> int:
     """
@@ -21,7 +19,6 @@ def estimate_tokens(text: str) -> int:
         return 0
 
     return len(text.split())
-
 
 def write_request_log(
     request: Request,
